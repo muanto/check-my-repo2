@@ -40,7 +40,6 @@ const InputScreen = ({
       >
         <FormControl isInvalid={isInvalid}>
           <Input
-            isInvalid
             focusBorderColor="black"
             width={450}
             maxW={"100%"}
