@@ -12,10 +12,13 @@ app.post("/send-telegram-message", async (req, res) => {
   const { sender, repoUrl } = req.body;
 
   try {
-    await axios.post(pushMoreUrl, {
+    const response = await axios.post(pushMoreUrl, {
       sender: sender,
       repoUrl: repoUrl,
     });
+    if (response.statusText !== "OK") {
+      throw new Error("Response is not OK");
+    }
     res.status(200).send("OK");
   } catch (error) {
     res.status(500).send("Errore invio messaggio a Telegram " + error);

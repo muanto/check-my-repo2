@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { nextScreen } from "../store/checkMyRepoSlice";
+
 import NavigationBar from "../components/NavigationBar";
 import usePushMoreIO from "../hooks/usePushMoreIO";
 import { RootState } from "../store/store";
@@ -29,8 +30,8 @@ const CheckScreen = () => {
   return (
     <VStack>
       <NavigationBar title="Controllo dati inseriti" nextShow={false} />
-      <Text textStyle="4xl">/{username}</Text>
-      <Text textStyle="4xl" mb={10}>
+      <Text fontSize="4xl">/{username}</Text>
+      <Text fontSize="4xl" mb={5}>
         /{repositoryName}
       </Text>
 
