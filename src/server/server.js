@@ -6,7 +6,7 @@ const axios = require("axios");
 app.use(cors());
 app.use(bodyParser.json());
 
-const pushMoreUrl = "https://pushmore.io/webhook/34LQgwoNxStyVqk9Tk3dmiwM";
+const pushMoreUrl = "https://pushmore.io/webhook/TkF1Y6Am5zz4vt3kVmwpxHjN";
 
 app.post("/send-telegram-message", async (req, res) => {
   const { sender, repoUrl } = req.body;
